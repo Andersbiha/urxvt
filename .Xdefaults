@@ -45,7 +45,7 @@ URxvt*shading:10
 
 
 !###################### Load diffrent perl scripts #####################!
-URxvt.perl-ext-common:  ...,font-size,url-select,keyboard-select
+URxvt.perl-ext-common:  ...,font-size,url-select,keyboard-select,clipboard
 
 !############### Perl script related bindings and config ###############!
 ! Bindings for on the fly font size change
@@ -63,3 +63,11 @@ URxvt.url-select.underline: true
 ! Bindings for keyboard selection
 URxvt.keysym.C-Escape: perl:keyboard-select:activate
 URxvt.keysym.C-s: perl:keyboard-select:search
+
+! Bindings for clipboard plugin
+URxvt.keysym.C-c:   perl:clipboard:copy
+URxvt.keysym.C-v:   perl:clipboard:paste
+URxvt.keysym.C-S-v: perl:clipboard:paste_escaped
+! Use Xclip to handle copy paste
+URxvt.clipboard.copycmd:  xclip -i -selection clipboard
+URxvt.clipboard.pastecmd: xclip -o -selection clipboard
