@@ -11,7 +11,7 @@ URxvt*scrollColor: #bfff00
 
 ! Set transparent background
 URxvt*transparent: true
-URxvt*shading:10
+URxvt*shading:20
 
 
 !######################### Colorscheme settings ########################!
